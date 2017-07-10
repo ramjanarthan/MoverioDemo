@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bg_slider_screen"
+    tools:context="com.epson.moverio.moveriodemo.MenuActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02"
+        android:text="MENU"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/slide_title"
+        android:typeface="sans" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:text="  3D movie"
+        android:textSize="@dimen/big_button"
+        android:onClick="twoDButtonClick"
+        android:layout_margin="15dp"
+        android:drawableLeft="@drawable/movieicon"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:text="  DJI Go Fly"
+        android:textSize="@dimen/big_button"
+        android:onClick="djiButtonClick"
+        android:layout_margin="15dp"
+        android:drawableLeft="@drawable/djiicon"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:text="  360 Viewer"
+        android:textSize="@dimen/big_button"
+        android:onClick="viewerDButtonClick"
+        android:layout_margin="15dp"
+        android:drawableLeft="@drawable/viewericon"/>
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/big_button"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@drawable/home"
+        android:layout_margin="15dp"
+        android:drawablePadding="5dp"
+        android:background="@null"
+        android:text="@string/btnHome"
+        android:textColor="#ededed" />
+</LinearLayout>
