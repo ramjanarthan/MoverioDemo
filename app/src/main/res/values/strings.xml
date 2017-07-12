@@ -8,6 +8,7 @@
     <string name="btnNext">Next</string>
     <string name="btnHome">Home</string>
     <string name="btnMenu">Menu</string>
+    <string name="btnMenuFinal">Finish</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_viewer">ViewerActivity</string>
     <string name="intro1_header">Welcome to the Moverio BT-300</string>

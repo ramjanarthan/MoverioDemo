@@ -176,10 +176,15 @@ public class TwoDActivity extends AppCompatActivity {
                 _displayControl.setMode(DisplayControl.DISPLAY_MODE_2D, false);
                 btnNext.setVisibility(View.VISIBLE);
                 btnPrev.setVisibility(View.INVISIBLE);
+                btnMenu.setText(getString(R.string.btnMenu));
+
             } else if (position == 8){
                 _displayControl.setMode(DisplayControl.DISPLAY_MODE_3D, false);
                 btnNext.setVisibility(View.INVISIBLE);
                 btnPrev.setVisibility(View.INVISIBLE);
+                btnHome.setVisibility(View.INVISIBLE);
+                findViewById(R.id.layoutDots).setVisibility(View.INVISIBLE);
+                btnMenu.setText(getString(R.string.btnMenuFinal));
             } else {
                 _displayControl.setMode(DisplayControl.DISPLAY_MODE_2D, false);
                 btnNext.setVisibility(View.VISIBLE);
