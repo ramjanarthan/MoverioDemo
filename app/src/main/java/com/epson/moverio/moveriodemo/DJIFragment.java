@@ -56,11 +56,6 @@ public class DJIFragment extends Fragment {
 
         // Inflate the layout resource file
         View view = getActivity().getLayoutInflater().inflate(layoutResId, container, false);
-        if (mPage == 1) {
-            ImageView imageView = (ImageView) view.findViewById(R.id.fullImage);
-            GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-            Glide.with(this).load(R.drawable.drone2).into(imageViewTarget);
-        }
         view.setTag(mPage);
 
         return view;
