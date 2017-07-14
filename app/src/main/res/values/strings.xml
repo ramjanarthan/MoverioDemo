@@ -21,6 +21,7 @@
     <string name="dji3_header">Welcome to the Moverio BT-30</string>
     <string name="twod1_header">Welcome to the Moverio BT-30</string>
     <string name="twod2_header">Welcome to the Moverio BT-30</string>
+    <string name="title_activity_ar">ARActivity</string>
 
 
 </resources>
