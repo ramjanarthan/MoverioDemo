@@ -1,12 +1,17 @@
 package com.epson.moverio.moveriodemo;
 
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
@@ -43,24 +48,73 @@ public class DJIFragment extends Fragment {
 
         // Select a layout based on the current page
         int layoutResId;
+        View view;
+        VideoView video;
+        ImageView imageView;
+        GlideDrawableImageViewTarget imageViewTarget;
         switch (mPage) {
             case 0:
-                layoutResId = R.layout.fragment_dji1;
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.drone_intro));
                 break;
             case 1:
-                layoutResId = R.layout.fragment_dji2;
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.drone_power));
+                break;
+            case 2:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.drone_cable));
+                break;
+            case 3:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+                Glide.with(this).load(R.drawable.drone_menugif).into(imageViewTarget);
+                break;
+
+            case 4:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+                Glide.with(this).load(R.drawable.drone_entergif).into(imageViewTarget);
                 break;
             default:
-                layoutResId = R.layout.fragment_dji3;
-        }
+                layoutResId = R.layout.fragment_bigmovie;
+                view = setupView(container, layoutResId);
+                video = (VideoView) view.findViewById(R.id.movie);
+                String uripath = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.drone_experience;
+                Uri uri = Uri.parse(uripath);
+                video.setVideoURI(uri);
+                video.setOnPreparedListener (new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.setLooping(true);
+                    }
+                });
+                video.start();
 
-        // Inflate the layout resource file
-        View view = getActivity().getLayoutInflater().inflate(layoutResId, container, false);
-        view.setTag(mPage);
+        }
 
         return view;
     }
 
+
+    @NonNull
+    private View setupView(ViewGroup container, int layoutResId) {
+        // Inflate the layout resource file
+        View view = getActivity().getLayoutInflater().inflate(layoutResId, container, false);
+        // Set the current page index as the View's tag (useful in the PageTransformer)
+        view.setTag(mPage);
+        return view;
+    }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,29 +55,33 @@ public class TwoDFragment extends Fragment {
             Uri uri = Uri.parse(uripath);
             switch (mPage) {
                 case 0:
-                    layoutResId = R.layout.fragment_twod1;
+                    layoutResId = R.layout.fragment_bigimage;
                     view = setupView(container, layoutResId);
+                    imageView = (ImageView) view.findViewById(R.id.fullImage);
+                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_intro));
                     break;
                 case 1:
-                    layoutResId = R.layout.fragment_twod2;
+                    layoutResId = R.layout.fragment_bigimage;
                     view = setupView(container, layoutResId);
                     imageView = (ImageView) view.findViewById(R.id.fullImage);
                     imageViewTarget = new GlideDrawableImageViewTarget(imageView);
                     Glide.with(this).load(R.drawable.twod_homescreen).into(imageViewTarget);
                     break;
                 case 2:
-                    layoutResId = R.layout.fragment_twod3;
+                    layoutResId = R.layout.fragment_bigimage;
                     view = setupView(container, layoutResId);
                     imageView = (ImageView) view.findViewById(R.id.fullImage);
                     imageViewTarget = new GlideDrawableImageViewTarget(imageView);
                     Glide.with(this).load(R.drawable.twod_photos).into(imageViewTarget);
                     break;
                 case 3:
-                    layoutResId = R.layout.fragment_twod4;
+                    layoutResId = R.layout.fragment_bigimage;
                     view = setupView(container, layoutResId);
+                    imageView = (ImageView) view.findViewById(R.id.fullImage);
+                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_ball));
                     break;
                 case 4:
-                    layoutResId = R.layout.fragment_twod5;
+                    layoutResId = R.layout.fragment_bigmovie;
                     view = setupView(container, layoutResId);
 
                     video = (VideoView) view.findViewById(R.id.movie);
@@ -90,22 +95,26 @@ public class TwoDFragment extends Fragment {
                     video.start();
                     break;
                 case 5:
-                    layoutResId = R.layout.fragment_twod6;
+                    layoutResId = R.layout.fragment_bigimage;
                     view = setupView(container, layoutResId);
+                    imageView = (ImageView) view.findViewById(R.id.fullImage);
+                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_toggle));
                     break;
                 case 6:
-                    layoutResId = R.layout.fragment_twod7;
+                    layoutResId = R.layout.fragment_bigimage;
                     view = setupView(container, layoutResId);
                     imageView = (ImageView) view.findViewById(R.id.fullImage);
                     imageViewTarget = new GlideDrawableImageViewTarget(imageView);
                     Glide.with(this).load(R.drawable.twod_togglegif).into(imageViewTarget);
                     break;
                 case 7:
-                    layoutResId = R.layout.fragment_twod8;
+                    layoutResId = R.layout.fragment_bigimage;
                     view = setupView(container, layoutResId);
+                    imageView = (ImageView) view.findViewById(R.id.fullImage);
+                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_rightkey));
                     break;
                 default:
-                    layoutResId = R.layout.fragment_twod5;
+                    layoutResId = R.layout.fragment_bigmovie;
                     view = setupView(container, layoutResId);
                     video = (VideoView) view.findViewById(R.id.movie);
                     video.setVideoURI(uri);

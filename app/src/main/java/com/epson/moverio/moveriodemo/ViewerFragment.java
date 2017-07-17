@@ -40,13 +40,13 @@ public class ViewerFragment extends Fragment {
         int layoutResId;
         switch (mPage) {
             case 0:
-                layoutResId = R.layout.fragment_viewer1;
+                layoutResId = R.layout.fragment_bigimage;
                 break;
             case 1:
-                layoutResId = R.layout.fragment_viewer2;
+                layoutResId = R.layout.fragment_bigmovie;
                 break;
             default:
-                layoutResId = R.layout.fragment_viewer3;
+                layoutResId = R.layout.fragment_bigimage;
         }
 
         // Inflate the layout resource file

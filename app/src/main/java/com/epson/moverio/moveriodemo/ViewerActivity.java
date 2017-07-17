@@ -20,7 +20,7 @@ public class ViewerActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private LinearLayout dotsLayout;
     private TextView[] dots;
-    private int[] layouts;
+    private int layouts;
     private Button btnPrev, btnNext, btnHome, btnMenu;
 
     @Override
@@ -38,18 +38,17 @@ public class ViewerActivity extends AppCompatActivity {
 
         btnPrev.setVisibility(View.INVISIBLE);
 
+        // Set an Adapter on the ViewPager
+        IntroAdapter introAdapter = new IntroAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(introAdapter);
+
+
         // layouts of all welcome sliders
         // add few more layouts if you want
-        layouts = new int[]{
-                R.layout.fragment_viewer1,
-                R.layout.fragment_viewer2,
-                R.layout.fragment_viewer3};
-
+        layouts = introAdapter.getCount();
         // adding bottom dots
         addBottomDots(0);
 
-        // Set an Adapter on the ViewPager
-        viewPager.setAdapter(new IntroAdapter(getSupportFragmentManager()));
 
         // Set a PageTransformer
         viewPager.setPageTransformer(false, new CustomPageTransformer());
@@ -99,7 +98,7 @@ public class ViewerActivity extends AppCompatActivity {
                 // checking for last page
                 // if last page home screen will be launched
                 int current = getItem(+1);
-                if (current < layouts.length) {
+                if (current < layouts) {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
@@ -127,7 +126,7 @@ public class ViewerActivity extends AppCompatActivity {
     }
 
     private void addBottomDots(int currentPage) {
-        dots = new TextView[layouts.length];
+        dots = new TextView[layouts];
         dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
