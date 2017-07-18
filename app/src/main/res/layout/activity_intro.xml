@@ -16,7 +16,8 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_alignTop="@+id/linearLayout"></LinearLayout>
+        android:layout_alignTop="@+id/linearLayout">
+    </LinearLayout>
     <View
         android:id="@+id/dots"
         android:layout_width="match_parent"

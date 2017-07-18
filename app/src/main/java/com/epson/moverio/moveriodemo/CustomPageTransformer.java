@@ -23,29 +23,12 @@ public class CustomPageTransformer implements ViewPager.PageTransformer {
             //Page is being viewed
         } else {
 
-            View image = page.findViewById(R.id.visualAid);
+            View image = page.findViewById(R.id.fullImage);
 
             if (image != null) {
-
-                View title = page.findViewById(R.id.header);
-                title.setTranslationX(-pageWidthTimesPosition / 3f);
-
-                image.setAlpha(1.0f - absPosition);
-                image.setTranslationX(-pageWidthTimesPosition * 1.5f);
+                image.setTranslationX(pageWidthTimesPosition * 1.5f);
             }
 
-            View description = page.findViewById(R.id.info);
-
-            if (description != null ) {
-                description.setTranslationX(-pageWidthTimesPosition / 3f);
-                description.setAlpha(1.0f - absPosition);
-            }
-
-            if (position < 0) {
-                // Create your out animation here
-            } else {
-                // Create your in animation here
-            }
         }
     }
 

@@ -2,10 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_slider_screen">
+    android:background="@color/bg_slider_screen"
+    android:layout_gravity="center">
 
     <VideoView
         android:id="@+id/movie"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+    </VideoView>
+
 </LinearLayout>

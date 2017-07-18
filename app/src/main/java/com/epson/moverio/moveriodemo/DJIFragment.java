@@ -80,7 +80,7 @@ public class DJIFragment extends Fragment {
                 break;
 
             case 4:
-                layoutResId = R.layout.fragment_bigimage;
+                layoutResId = R.layout.fragment_smallimage;
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);

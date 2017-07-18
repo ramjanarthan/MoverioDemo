@@ -2,12 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_slider_screen">
+    android:orientation="vertical"
+    android:background="@color/bg_slider_screen"
+    android:weightSum="1">
 
     <ImageView
         android:id="@+id/fullImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/twod_intro" />
+        android:layout_height="200dp"
+        android:layout_weight="0.85" />
+
 
 </LinearLayout>
