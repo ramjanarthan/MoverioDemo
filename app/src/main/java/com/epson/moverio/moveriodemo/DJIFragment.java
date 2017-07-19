@@ -34,6 +34,11 @@ public class DJIFragment extends Fragment {
         return frag;
     }
 
+    public static int getCount() {
+        return 6;
+    }
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -33,6 +33,11 @@ public class TwoDFragment extends Fragment {
         return frag;
     }
 
+    public static int getCount() {
+        return 9;
+    }
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,95 +49,91 @@ public class TwoDFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        try {
-            // Select a layout based on the current page
-            int layoutResId;
-            View view;
-            VideoView video;
-            ImageView imageView;
-            GlideDrawableImageViewTarget imageViewTarget;
-            String uripath = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.twod_football;
-            Uri uri = Uri.parse(uripath);
-            switch (mPage) {
-                case 0:
-                    layoutResId = R.layout.fragment_bigimage;
-                    view = setupView(container, layoutResId);
-                    imageView = (ImageView) view.findViewById(R.id.fullImage);
-                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_intro));
-                    break;
-                case 1:
-                    layoutResId = R.layout.fragment_bigimage;
-                    view = setupView(container, layoutResId);
-                    imageView = (ImageView) view.findViewById(R.id.fullImage);
-                    imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                    Glide.with(this).load(R.drawable.twod_homescreen).into(imageViewTarget);
-                    break;
-                case 2:
-                    layoutResId = R.layout.fragment_bigimage;
-                    view = setupView(container, layoutResId);
-                    imageView = (ImageView) view.findViewById(R.id.fullImage);
-                    imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                    Glide.with(this).load(R.drawable.twod_photos).into(imageViewTarget);
-                    break;
-                case 3:
-                    layoutResId = R.layout.fragment_bigimage;
-                    view = setupView(container, layoutResId);
-                    imageView = (ImageView) view.findViewById(R.id.fullImage);
-                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_ball));
-                    break;
-                case 4:
-                    layoutResId = R.layout.fragment_bigmovie;
-                    view = setupView(container, layoutResId);
+        // Select a layout based on the current page
+        int layoutResId;
+        View view;
+        VideoView video;
+        ImageView imageView;
+        GlideDrawableImageViewTarget imageViewTarget;
+        String uripath = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.twod_experience;
+        Uri uri = Uri.parse(uripath);
+        switch (mPage) {
+            case 0:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_intro));
+                break;
+            case 1:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+                Glide.with(this).load(R.drawable.twod_homescreen).into(imageViewTarget);
+                break;
+            case 2:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+                Glide.with(this).load(R.drawable.twod_photos).into(imageViewTarget);
+                break;
+            case 3:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_ball));
+                break;
+            case 4:
+                layoutResId = R.layout.fragment_bigmovie;
+                view = setupView(container, layoutResId);
 
-                    video = (VideoView) view.findViewById(R.id.movie);
-                    video.setVideoURI(uri);
-                    video.setOnPreparedListener (new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mp) {
-                            mp.setLooping(true);
-                        }
-                    });
-                    video.start();
-                    break;
-                case 5:
-                    layoutResId = R.layout.fragment_bigimage;
-                    view = setupView(container, layoutResId);
-                    imageView = (ImageView) view.findViewById(R.id.fullImage);
-                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_toggle));
-                    break;
-                case 6:
-                    layoutResId = R.layout.fragment_bigimage;
-                    view = setupView(container, layoutResId);
-                    imageView = (ImageView) view.findViewById(R.id.fullImage);
-                    imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                    Glide.with(this).load(R.drawable.twod_toggif).into(imageViewTarget);
-                    break;
-                case 7:
-                    layoutResId = R.layout.fragment_bigimage;
-                    view = setupView(container, layoutResId);
-                    imageView = (ImageView) view.findViewById(R.id.fullImage);
-                    imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_rightkey));
-                    break;
-                default:
-                    layoutResId = R.layout.fragment_bigmovie;
-                    view = setupView(container, layoutResId);
-                    video = (VideoView) view.findViewById(R.id.movie);
-                    video.setVideoURI(uri);
-                    video.setOnPreparedListener (new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mp) {
-                            mp.setLooping(true);
-                        }
-                    });
-                    video.start();
+                video = (VideoView) view.findViewById(R.id.movie);
+                video.setVideoURI(uri);
+                video.setOnPreparedListener (new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.setLooping(true);
+                    }
+                });
+                video.start();
+                break;
+            case 5:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_toggle));
+                break;
+            case 6:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+                Glide.with(this).load(R.drawable.twod_toggif).into(imageViewTarget);
+                break;
+            case 7:
+                layoutResId = R.layout.fragment_bigimage;
+                view = setupView(container, layoutResId);
+                imageView = (ImageView) view.findViewById(R.id.fullImage);
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.twod_rightkey));
+                break;
+            default:
+                layoutResId = R.layout.fragment_bigmovie;
+                view = setupView(container, layoutResId);
+                video = (VideoView) view.findViewById(R.id.movie);
+                video.setVideoURI(uri);
+                video.setOnPreparedListener (new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mp.setLooping(true);
+                    }
+                });
+                video.start();
 
-                    break;
+                break;
 
-            }
-            return view;
-        } catch (Exception e){
-            return null;
         }
+        return view;
     }
 
 

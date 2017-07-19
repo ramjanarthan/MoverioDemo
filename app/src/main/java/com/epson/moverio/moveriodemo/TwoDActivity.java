@@ -219,7 +219,7 @@ public class TwoDActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 9;
+            return TwoDFragment.getCount();
         }
 
     }

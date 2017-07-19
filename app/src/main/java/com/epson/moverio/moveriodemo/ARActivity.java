@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
+import com.threed.jpct.Light;
 import com.threed.jpct.Object3D;
 import com.threed.jpct.Primitives;
 import com.threed.jpct.Texture;
@@ -51,7 +52,10 @@ public class ARActivity extends ArJpctActivity {
     }
 
     public void configureWorld(World world) {
-        world.setAmbientLight(400, 400, 200);
+        world.setAmbientLight(20, 20, 20);
+
+        Light sun = new Light(world);
+        sun.setIntensity(250, 250, 250);
     }
 
     protected void populateTrackableObjects(List<TrackableObject3d> list) {
@@ -64,7 +68,7 @@ public class ARActivity extends ArJpctActivity {
         // Planes are rotated 180 degrees, so we need to flip them
         object3D.rotateX((float) Math.PI);
         // Load the AR Toolkit texture on top of the plane
-        Texture texture = new Texture(BitmapHelper.rescale(BitmapHelper.convert(ContextCompat.getDrawable(this,R.drawable.ar_image)), 2048, 1024));
+        Texture texture = new Texture(BitmapHelper.rescale(BitmapHelper.convert(ContextCompat.getDrawable(this,R.drawable.artest6)), 1024, 1024));
         TextureManager.getInstance().addTexture("epsonlogo", texture);
 
         object3D.setTexture("epsonlogo");

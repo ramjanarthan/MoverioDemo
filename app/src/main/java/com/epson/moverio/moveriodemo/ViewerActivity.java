@@ -195,7 +195,7 @@ public class ViewerActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3;
+            return ViewerFragment.getCount();
         }
 
     }

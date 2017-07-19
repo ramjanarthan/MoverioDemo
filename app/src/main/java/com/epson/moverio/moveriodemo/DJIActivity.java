@@ -202,7 +202,7 @@ public class DJIActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 6;
+            return DJIFragment.getCount();
         }
 
     }

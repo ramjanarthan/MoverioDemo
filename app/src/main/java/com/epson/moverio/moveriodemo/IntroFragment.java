@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.VideoView;
 
 /**
  * Created by ijp_mbp on 23/6/17.
@@ -27,6 +26,11 @@ public class IntroFragment extends Fragment {
         frag.setArguments(b);
         return frag;
     }
+
+    public static int getCount() {
+        return 5;
+    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,7 +53,7 @@ public class IntroFragment extends Fragment {
                 layoutResId = R.layout.fragment_bigimage;
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
-                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.home_intro));
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.home_one));
                 break;
             case 1:
                 layoutResId = R.layout.fragment_bigimage;

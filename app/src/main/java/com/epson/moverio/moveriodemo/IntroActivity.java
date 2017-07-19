@@ -191,7 +191,7 @@ public class IntroActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 5;
+            return IntroFragment.getCount();
         }
 
     }
