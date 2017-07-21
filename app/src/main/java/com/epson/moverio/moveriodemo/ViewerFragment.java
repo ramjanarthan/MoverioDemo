@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.VideoView;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 /**
@@ -66,7 +67,8 @@ public class ViewerFragment extends Fragment {
                 layoutResId = R.layout.fragment_bigimage;
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
-                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.viewer_one));
+                imageViewTarget = new GlideDrawableImageViewTarget(imageView);
+                Glide.with(this).load(R.drawable.viewer_iconpress).into(imageViewTarget);
                 break;
             case 2:
                 layoutResId = R.layout.fragment_bigimage;

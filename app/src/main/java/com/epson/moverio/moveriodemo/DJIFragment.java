@@ -81,7 +81,7 @@ public class DJIFragment extends Fragment {
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                Glide.with(this).load(R.drawable.drone_menugif).into(imageViewTarget);
+                Glide.with(this).load(R.drawable.drone_iconpress).into(imageViewTarget);
                 break;
 
             case 4:
@@ -89,7 +89,7 @@ public class DJIFragment extends Fragment {
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                Glide.with(this).load(R.drawable.drone_entergif).into(imageViewTarget);
+                Glide.with(this).load(R.drawable.drone_gofly).into(imageViewTarget);
                 break;
             default:
                 layoutResId = R.layout.fragment_bigmovie;

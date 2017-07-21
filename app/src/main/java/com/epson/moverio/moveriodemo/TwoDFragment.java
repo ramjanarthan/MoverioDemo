@@ -69,14 +69,14 @@ public class TwoDFragment extends Fragment {
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                Glide.with(this).load(R.drawable.twod_homescreen).into(imageViewTarget);
+                Glide.with(this).load(R.drawable.twod_menugif).into(imageViewTarget);
                 break;
             case 2:
                 layoutResId = R.layout.fragment_bigimage;
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                Glide.with(this).load(R.drawable.twod_photos).into(imageViewTarget);
+                Glide.with(this).load(R.drawable.twod_gallerygif).into(imageViewTarget);
                 break;
             case 3:
                 layoutResId = R.layout.fragment_bigimage;
@@ -109,7 +109,7 @@ public class TwoDFragment extends Fragment {
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                Glide.with(this).load(R.drawable.twod_toggif).into(imageViewTarget);
+                Glide.with(this).load(R.drawable.twod_switchgif).into(imageViewTarget);
                 break;
             case 7:
                 layoutResId = R.layout.fragment_bigimage;

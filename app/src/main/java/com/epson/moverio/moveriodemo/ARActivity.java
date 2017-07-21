@@ -68,7 +68,7 @@ public class ARActivity extends ArJpctActivity {
         // Planes are rotated 180 degrees, so we need to flip them
         object3D.rotateX((float) Math.PI);
         // Load the AR Toolkit texture on top of the plane
-        Texture texture = new Texture(BitmapHelper.rescale(BitmapHelper.convert(ContextCompat.getDrawable(this,R.drawable.artest6)), 1024, 1024));
+        Texture texture = new Texture(BitmapHelper.rescale(BitmapHelper.convert(ContextCompat.getDrawable(this,R.drawable.ar_overlay)), 2048, 1024));
         TextureManager.getInstance().addTexture("epsonlogo", texture);
 
         object3D.setTexture("epsonlogo");
