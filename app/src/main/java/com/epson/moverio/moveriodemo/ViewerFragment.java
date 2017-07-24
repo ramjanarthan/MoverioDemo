@@ -68,7 +68,7 @@ public class ViewerFragment extends Fragment {
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                Glide.with(this).load(R.drawable.viewer_iconpress).into(imageViewTarget);
+                Glide.with(this).load(R.drawable.viewer_select).into(imageViewTarget);
                 break;
             case 2:
                 layoutResId = R.layout.fragment_bigimage;
