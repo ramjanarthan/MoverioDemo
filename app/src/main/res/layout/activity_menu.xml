@@ -62,5 +62,6 @@
         android:drawablePadding="5dp"
         android:background="@drawable/button_bg_stroke"
         android:text="@string/btnHome"
-        android:textColor="#ededed" />
+        android:textColor="#ededed"
+        android:padding="10dp"/>
 </LinearLayout>

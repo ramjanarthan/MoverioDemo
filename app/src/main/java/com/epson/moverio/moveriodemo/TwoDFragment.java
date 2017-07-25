@@ -69,7 +69,7 @@ public class TwoDFragment extends Fragment {
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
                 imageViewTarget = new GlideDrawableImageViewTarget(imageView);
-                Glide.with(this).load(R.drawable.twod_menugif).into(imageViewTarget);
+                Glide.with(this).load(R.drawable.twod_select).into(imageViewTarget);
                 break;
             case 2:
                 layoutResId = R.layout.fragment_bigimage;
