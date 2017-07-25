@@ -177,7 +177,7 @@ public class ViewerActivity extends AppCompatActivity {
      * View pager adapter
      */
 
-    public class IntroAdapter extends FragmentPagerAdapter {
+    private class IntroAdapter extends FragmentPagerAdapter {
 
         public IntroAdapter(FragmentManager fm) {
             super(fm);
