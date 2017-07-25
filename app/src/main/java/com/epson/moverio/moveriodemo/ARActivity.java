@@ -43,14 +43,14 @@ public class ARActivity extends ArJpctActivity {
         finish();
     }
 
-    /**
-     * Use the FrameLayout in this Activity's UI.
-     */
+
+     //Use the FrameLayout in this Activity's UI
     @Override
     protected FrameLayout supplyFrameLayout() {
         return (FrameLayout)this.findViewById(R.id.mainLayout);
     }
 
+    //Setup AR World
     public void configureWorld(World world) {
         world.setAmbientLight(20, 20, 20);
 
@@ -67,11 +67,12 @@ public class ARActivity extends ArJpctActivity {
         Object3D object3D = Primitives.getPlane(2, 60);
         // Planes are rotated 180 degrees, so we need to flip them
         object3D.rotateX((float) Math.PI);
+
         // Load the AR Toolkit texture on top of the plane
         Texture texture = new Texture(BitmapHelper.rescale(BitmapHelper.convert(ContextCompat.getDrawable(this,R.drawable.ar_overlay)), 2048, 1024));
-        TextureManager.getInstance().addTexture("epsonlogo", texture);
+        TextureManager.getInstance().addTexture("arimage", texture);
 
-        object3D.setTexture("epsonlogo");
+        object3D.setTexture("arimage");
         return object3D;
     }
 

@@ -43,16 +43,12 @@ public class TwoDActivity extends AppCompatActivity {
 
         btnPrev.setVisibility(View.INVISIBLE);
 
-        // layouts of all welcome sliders
-        // add few more layouts if you want
-
-
         // Set an Adapter on the ViewPager
         IntroAdapter introAdapter = new IntroAdapter(getSupportFragmentManager());
         viewPager.setAdapter(introAdapter);
-
         layouts = introAdapter.getCount();
         addBottomDots(0);
+
         // Set a PageTransformer
         viewPager.setPageTransformer(false, new CustomPageTransformer());
 

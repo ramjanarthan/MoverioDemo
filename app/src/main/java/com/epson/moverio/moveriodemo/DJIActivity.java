@@ -1,6 +1,5 @@
 package com.epson.moverio.moveriodemo;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,18 +8,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 public class DJIActivity extends AppCompatActivity {
 
@@ -48,9 +40,6 @@ public class DJIActivity extends AppCompatActivity {
         // Set an Adapter on the ViewPager
         IntroAdapter introAdapter = new IntroAdapter(getSupportFragmentManager());
         viewPager.setAdapter(introAdapter);
-
-        // layouts of all welcome sliders
-        // add few more layouts if you want
         layouts = introAdapter.getCount();
 
         // adding bottom dots
@@ -146,6 +135,7 @@ public class DJIActivity extends AppCompatActivity {
         if (dots.length > 0)
             dots[currentPage].setTextColor(ContextCompat.getColor(this, R.color.dot_active_screen));
     }
+
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
     }
@@ -203,16 +193,6 @@ public class DJIActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return DJIFragment.getCount();
-        }
-
-    }
-
-
-    private class GifWebView extends WebView {
-
-        public GifWebView (Context context, String path) {
-            super(context);
-            loadUrl(path);
         }
 
     }

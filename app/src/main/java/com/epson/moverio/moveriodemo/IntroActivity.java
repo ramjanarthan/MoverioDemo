@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.artoolkit.ar.base.*;
 
 public class IntroActivity extends AppCompatActivity {
 
@@ -97,7 +96,7 @@ public class IntroActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    launcARScreen();
+                    launchARScreen();
                 }
             }
         });
@@ -145,7 +144,7 @@ public class IntroActivity extends AppCompatActivity {
         finish();
     }
 
-    private void launcARScreen() {
+    private void launchARScreen() {
         Intent intent = new Intent(this, ARActivity.class);
         startActivity(intent);
         finish();

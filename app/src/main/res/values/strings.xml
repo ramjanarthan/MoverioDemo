@@ -4,24 +4,16 @@
     <string name="title_activity_menu">MenuActivity</string>
     <string name="title_activity_two_d">TwoDActivity</string>
     <string name="title_activity_dji">DJIActivity</string>
+    <string name="title_activity_viewer">ViewerActivity</string>
+    <string name="title_activity_ar">ARActivity</string>
+    <string name="menu_title">MENU</string>
     <string name="btnPrevious">Back</string>
     <string name="btnNext">Next</string>
     <string name="btnHome">Home</string>
     <string name="btnMenu">Menu</string>
     <string name="btnFinish">Finish</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="title_activity_viewer">ViewerActivity</string>
-    <string name="intro1_header">Welcome to the Moverio BT-300</string>
-    <string name="intro2_header">Cutting edge projector technology, at your fingertips</string>
-    <string name="intro2_info">Easy to wear, easy to use</string>
-    <string name="intro3_header">Glasses and Controller, for complete control</string>
-    <string name="intro3_info">Lightweight and portable</string>
-    <string name="dji1_header">Always wanted to fly with your drone? Now you can, with the DJI Go App for Epson Moverio SmartGlasses</string>
-    <string name="dji2_heard">Welcome to the Moverio BT-30</string>
-    <string name="dji3_header">Welcome to the Moverio BT-30</string>
-    <string name="twod1_header">Welcome to the Moverio BT-30</string>
-    <string name="twod2_header">Welcome to the Moverio BT-30</string>
-    <string name="title_activity_ar">ARActivity</string>
-
-
+    <string name="twod_button">3D Movie</string>
+    <string name="drone_button">DJI Go Fly</string>
+    <string name="viewer_button">360 Viewer</string>
 </resources>

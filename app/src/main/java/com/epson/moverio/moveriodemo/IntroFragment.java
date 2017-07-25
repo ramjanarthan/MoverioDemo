@@ -1,7 +1,6 @@
 package com.epson.moverio.moveriodemo;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
@@ -9,9 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-/**
- * Created by ijp_mbp on 23/6/17.
- */
 
 public class IntroFragment extends Fragment {
 
@@ -83,7 +79,6 @@ public class IntroFragment extends Fragment {
         return view;
     }
 
-    @NonNull
     private View setupView(ViewGroup container, int layoutResId) {
         // Inflate the layout resource file
         View view = getActivity().getLayoutInflater().inflate(layoutResId, container, false);

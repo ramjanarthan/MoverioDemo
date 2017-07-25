@@ -3,7 +3,6 @@ package com.epson.moverio.moveriodemo;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
@@ -15,9 +14,6 @@ import android.widget.VideoView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
-/**
- * Created by ijp_mbp on 23/6/17.
- */
 
 public class ViewerFragment extends Fragment {
 
@@ -108,7 +104,6 @@ public class ViewerFragment extends Fragment {
         return view;
     }
 
-    @NonNull
     private View setupView(ViewGroup container, int layoutResId) {
         // Inflate the layout resource file
         View view = getActivity().getLayoutInflater().inflate(layoutResId, container, false);

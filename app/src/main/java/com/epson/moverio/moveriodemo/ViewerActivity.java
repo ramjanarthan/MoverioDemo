@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -41,10 +40,6 @@ public class ViewerActivity extends AppCompatActivity {
         // Set an Adapter on the ViewPager
         IntroAdapter introAdapter = new IntroAdapter(getSupportFragmentManager());
         viewPager.setAdapter(introAdapter);
-
-
-        // layouts of all welcome sliders
-        // add few more layouts if you want
         layouts = introAdapter.getCount();
         // adding bottom dots
         addBottomDots(0);

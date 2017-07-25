@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:text="@string/btnFinish"
-            android:textColor="#ededed"
+            android:textColor="@color/colorPrimary"
             android:background="@color/button_color"
             />
     </FrameLayout>

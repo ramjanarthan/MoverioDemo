@@ -3,10 +3,7 @@ package com.epson.moverio.moveriodemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
@@ -50,9 +47,6 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewerActivity.class);
         startActivityForResult(intent,REQUEST_EXIT);
     }
-
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

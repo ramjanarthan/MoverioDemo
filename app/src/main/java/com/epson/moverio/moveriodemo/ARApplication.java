@@ -4,15 +4,10 @@ import android.app.Application;
 
 import org.artoolkit.ar.base.assets.AssetHelper;
 
-/**
- * Created by ijp_mbp on 14/7/17.
- */
-
 public class ARApplication extends Application {
     private static Application sInstance;
 
-    // Anywhere in the application where an instance is required, this method
-    // can be used to retrieve it.
+
     public static Application getInstance() {
         return sInstance;
     }
@@ -24,8 +19,6 @@ public class ARApplication extends Application {
         ((ARApplication) sInstance).initializeInstance();
     }
 
-    // Here we do one-off initialisation which should apply to all activities
-    // in the application.
     protected void initializeInstance() {
 
         // Unpack assets to cache directory so native library can read them.
