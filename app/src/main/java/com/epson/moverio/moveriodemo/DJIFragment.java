@@ -70,7 +70,7 @@ public class DJIFragment extends Fragment {
                 layoutResId = R.layout.fragment_bigimage;
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
-                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.drone_cable));
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.drone_connect));
                 break;
             case 3:
                 layoutResId = R.layout.fragment_bigimage;

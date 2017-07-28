@@ -19,7 +19,9 @@
             android:layout_gravity="center_horizontal|bottom"
             android:text="@string/btnFinish"
             android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/menu_title"
             android:background="@color/button_color"
+            android:padding="10dp"
             />
     </FrameLayout>
 

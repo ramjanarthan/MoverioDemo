@@ -76,7 +76,7 @@ public class ViewerFragment extends Fragment {
                 layoutResId = R.layout.fragment_bigimage;
                 view = setupView(container, layoutResId);
                 imageView = (ImageView) view.findViewById(R.id.fullImage);
-                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.viewer_four));
+                imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.viewer_search));
                 break;
             case 4:
                 layoutResId = R.layout.fragment_bigimage;
